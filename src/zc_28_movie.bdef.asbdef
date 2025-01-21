@@ -1,0 +1,16 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_28_Movie //alias Movie
+{
+  use create;
+  use update;
+
+  use association _Ratings { create; }
+}
+
+define behavior for ZC_28_Rating //alias Rating
+{  use delete;
+
+  use association _Movie;
+}
